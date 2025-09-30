@@ -74,6 +74,9 @@ button:focus {
 .taskbar li {
   position: relative;
 }
+ul.taskbar > li > a {
+  color: rgb(29, 27, 27);
+}
 .taskbar ul.sub_taskbar {
   position: absolute;
   background-color: rgb(109, 207, 249);
