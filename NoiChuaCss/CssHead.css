@@ -1,0 +1,220 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-width: 550px;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style-type: none;
+}
+.main {
+  border: solid 2px blue;
+}
+.Head {
+  background-color: rgb(42, 127, 237);
+  height: 125px;
+}
+.Left_head {
+  display: flex;
+  float: left;
+  color: white;
+  width: 50%;
+  margin: 10px;
+  margin-top: 50px;
+}
+.Right_head {
+  color: white;
+  display: flex;
+  float: right;
+  margin-top: 90px;
+  margin-right: 10px;
+  gap: 10px;
+}
+
+button {
+  border-radius: 10.5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.2);
+}
+button:hover {
+  background-color: #c1c1c1;
+}
+button:active {
+  background-color: #c1c1c1;
+}
+button:focus {
+  border-color: rgb(80, 203, 244);
+}
+
+.TopMenu {
+  background-color: rgb(125, 211, 250);
+  height: auto;
+}
+.TopMenu ul.taskbar {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+.TopMenu ul.taskbar li a {
+  font-display: block;
+  padding: 15px 18px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.taskbar li {
+  position: relative;
+}
+.taskbar ul.sub_taskbar {
+  position: absolute;
+  background-color: rgb(109, 207, 249);
+  padding: 15px 0px;
+  width: 151px;
+  margin-left: 17px;
+  border: solid 1px rgb(179, 242, 250);
+  display: none;
+}
+.taskbar li:hover > ul.sub_taskbar {
+  display: block;
+}
+.taskbar ul.sub_taskbar li a {
+  padding: 0;
+  margin: 18px;
+  border-bottom: solid 1px black;
+}
+.taskbar ul.sub_taskbar li:first-child {
+  margin-top: -7px;
+}
+.taskbar ul.sub_taskbar li {
+  width: 150px;
+  margin-bottom: 10px;
+}
+.taskbar ul.sub_taskbar li:last-child {
+  margin-bottom: 0px;
+}
+.taskbar ul.sub_taskbar li a {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+.taskbar ul.sub_taskbar li a:hover {
+  border-color: azure;
+}
+
+.taskbar ul.sub_taskbar li {
+  position: relative;
+}
+.taskbar ul.end_taskbar {
+  position: absolute;
+  background-color: rgb(109, 207, 249);
+  margin-left: 150px;
+  margin-top: -30px;
+  padding: 15px 0px;
+  border: solid 1px rgb(179, 242, 250);
+  display: none;
+}
+.taskbar ul.sub_taskbar li:hover > ul.end_taskbar {
+  display: block;
+}
+.taskbar ul.end_taskbar li {
+  width: 180px;
+}
+/*  Thiết lập border cho đẹp khi hover*/
+.taskbar > li > a {
+  position: relative;
+}
+.taskbar > li > a::before {
+  position: absolute;
+  height: 2px;
+  width: 0px;
+  background: rgb(255, 255, 255);
+  content: "";
+  left: 0;
+  transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.taskbar > li:hover > a::before {
+  width: 100%;
+}
+.taskbar > li:nth-child(1):hover > a::before {
+  width: 75%;
+  left: 14px;
+}
+.taskbar > li:nth-child(2):hover > a::before {
+  width: 75%;
+  left: 14px;
+}
+.taskbar > li:nth-child(3):hover > a::before {
+  width: 90%;
+  left: 14px;
+}
+.taskbar > li:nth-child(4):hover > a::before {
+  width: 83%;
+  left: 13px;
+}
+
+.Content {
+  display: flex;
+}
+.leftCT {
+  display: inline-block;
+  width: 25%;
+  background-color: rgb(80, 202, 243);
+  color: black;
+  height: 125px;
+}
+.leftCT button {
+  width: 95%;
+  margin-left: 3px;
+  margin-bottom: 3px;
+  margin-top: 3px;
+  text-align: left;
+}
+
+.Content_ct {
+  width: 75%;
+  background-color: bisque;
+}
+.border > div {
+  box-sizing: border-box;
+  border: solid 3px rgb(233, 128, 90);
+  width: calc(100% / 3 - 20px);
+  height: 200px;
+  float: left;
+  margin: 10px;
+  padding: 5px;
+  background-color: rgb(255, 240, 223);
+  box-shadow: 0 5px 5px rgb(100, 86, 86);
+}
+hr {
+  background-color: black;
+  border: solid 1px;
+  margin: 0;
+}
+.Content p {
+  margin: 0;
+  margin-top: 20px;
+}
+.Footer {
+  clear: both;
+  background-color: rgb(55, 107, 175);
+  color: white;
+  height: 125px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 695px) {
+  ul {
+    display: block;
+  }
+}
